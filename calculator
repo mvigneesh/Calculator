@@ -1,0 +1,66 @@
+import java.sql.SQLOutput;
+import java.util.*;
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your number1: ");
+        double num1 = sc.nextDouble();
+
+        System.out.print("Enter your number2: ");
+        double num2 = sc.nextDouble();
+        System.out.println();
+
+        System.out.print("Select your operation1(+,-,*,/,^,_,log): ");
+        String operation=sc.next();
+        double result;
+        double result1;
+        switch (operation) {
+            case "-":
+                result = num1 - num2;
+                System.out.println("Your value is: " + result);
+                break;
+
+            case "+":
+                result = num1 + num2;
+                System.out.println("Your value is: " + result);
+                break;
+
+            case "*":
+                result = num1 * num2;
+                System.out.println("Your value is: " + result);
+                break;
+
+            case"/":
+                result = num1 / num2;
+                if (result == 0) {
+                    System.out.println("Your value is 0");
+                } else System.out.println("Your value is: " + result);
+                break;
+
+            case "^":
+                result = Math.pow(num1,num2);
+                System.out.println("Your value is: " + result);
+                break;
+
+            case"_":
+                result =Math.sqrt(num1);
+                result1=Math.sqrt(num2);
+                System.out.println("Your value is: "+result);
+                System.out.println("Your value is: "+result1);
+                break;
+
+            case"log":
+                result=Math.log(num1);
+                result1=Math.log(num2);
+                System.out.println("Your value  log of num1 is: "+result);
+                System.out.println("Your value of : "+result1);
+                break;
+
+
+                
+        }
+
+
+    }
+}
